@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "PuyoPuyoBox"
+id = "SLPS-03114"
+players = 4
+exe = "disc/SLPS_031.14"
+disc = "C:/Users/227572/Downloads/Puyo Puyo Box (Japan)/Puyo Puyo Box (Japan).cue"
+load_address = "0x80120000"
+entry_pc = "0x8015BE04"
+text_size = "0x0004D800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Puyo Puyo Box (Japan).bin"
+cue_name = "Puyo Puyo Box (Japan).cue"
+boot_exe = "SLPS_031.14"
+known_sizes = [141853824]
+known_md5 = [
+  "8d59d404d8d74d35f2cc18296e51e506",
+]
+known_sha1 = [
+  "ca01a98ccc5ca796df082782a6dd1adee856c064",
+]
+known_crc32 = [
+  "0c0ad833",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "PuyoPuyoBox Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "b616fe1d91ac0062d7548891a5da3818bbaf4a5b3bf3a2aed88b00bfe1fe3756"

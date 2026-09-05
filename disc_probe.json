@@ -1,0 +1,31 @@
+{
+  "cue_path": "C:/Users/227572/Downloads/Puyo Puyo Box (Japan)/Puyo Puyo Box (Japan).cue",
+  "cue_name": "Puyo Puyo Box (Japan).cue",
+  "bin_name": "Puyo Puyo Box (Japan).bin",
+  "track_count": 1,
+  "data_track_size": 141853824,
+  "data_track_md5": "8d59d404d8d74d35f2cc18296e51e506",
+  "data_track_sha1": "ca01a98ccc5ca796df082782a6dd1adee856c064",
+  "data_track_crc32": "0c0ad833",
+  "boot_exe": "SLPS_031.14",
+  "serial": "SLPS-03114",
+  "serial_exe": "SLPS_031.14",
+  "volume_id": "SLPS03114",
+  "display_name": "PuyoPuyoBox",
+  "load_address": "0x80120000",
+  "entry_pc": "0x8015BE04",
+  "text_size": "0x0004D800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "b616fe1d91ac0062d7548891a5da3818bbaf4a5b3bf3a2aed88b00bfe1fe3756",
+  "boot_exe_sha256": "cca591c2a4c9632749a816b7adcc9cf8ff2f600d90f313eedf49a75c66edc473",
+  "seed_count": 565,
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
